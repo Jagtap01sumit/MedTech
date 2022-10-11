@@ -24,7 +24,10 @@ html {
     margin-top: 100px;
     font-family: 'Libre Baskerville', serif;
 }
-
+.nav_bar{
+    position: fixed;
+    width: 100%;
+}
 .navbar {
     justify-content: space-between;
     background-color: rgb(45, 40, 40);
@@ -324,7 +327,7 @@ a {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin-top: 267px;
+    /* margin-top: 192px; */
     font-family: 'Noto Serif JP', serif;
     font-size: 167px;
     padding-left: 442px;
@@ -351,7 +354,27 @@ a {
     display: flex;
     /* background-color: rgb(245, 83, 83); */
 }
-
+.images{
+    height: 100px;
+    width: 100px;
+}
+.image_2 img{
+    margin-right: 977px;
+    margin-top: -45px;
+    height: 243px;
+    width: 345px;
+}
+.images img{
+    height: 500px;
+    height: 321px;
+    width: 544px;
+    /* padding-bottom: 72px; */
+    padding-right: -52px;
+    /* padding: 146px; */
+    padding: initial;
+    padding-left: 231px;
+    margin-left: 95px;
+}
 .bb_Tital {
     font-size: 20px;
     align-items: center;

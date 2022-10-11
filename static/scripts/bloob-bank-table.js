@@ -25,14 +25,31 @@ function addTableRow(rowIndex, id, amount) {
 window.onload = () => {
     //on load we build the table dynamically by using 
     // the data the json-server 
+    // const blood = [
+    //     {"A+":0},{"B+":0},{"AB+":0},{"O+":0},
+    //     {"A-":0},{"B-":0},{"AB-":0},{"O-":0},
+
+
+    // ]
+     const blood = {
+        "A+":0, "B+":0, "AB+":0, "O+":0,
+        "A-":0, "B-":0, "AB-":0, "O-":0,
+     }
     const tbody = document.getElementById("table-body");
-    let bloodTypesData = getObjectFromLocalStorage("bloodBank");
+    let bloodTypesData = getObjectFromLocalStorage("donors");
     if (bloodTypesData) {
         bloodTypesData = bloodTypesData.sort((a, b) => b.amount - a.amount);
         let tableRow = {};
         for (let i = 0; i < bloodTypesData.length; i++) {
-            tableRow = addTableRow(i + 1, bloodTypesData[i].bloodType, bloodTypesData[i].amount);
+            // tableRow = addTableRow(i + 1, bloodTypesData[i].bloodType, bloodTypesData[i].amount);
+            // tbody.appendChild(tableRow);
+            blood[bloodTypesData[i].bloodType] += 1
+        }
+        let i = 0
+        for(type in blood){
+            tableRow = addTableRow(i + 1, type, blood[type]);
             tbody.appendChild(tableRow);
+            i++;
         }
     }
 }

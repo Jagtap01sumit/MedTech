@@ -37,8 +37,8 @@
     <!-- ---------------------------------------------------------------------------------------------- -->
     <nav class="navbar navbar-expand-xl navbar-light " style="background-color: #ffb5fd;">
         <a class="navbar-brand" href="/views/bb.html">
-            <img src="/static/assets/images/navbar-blood-drop.svg" width="30" height="30" class="d-inline-block align-top"
-                alt="">
+            <img src="/static/assets/images/navbar-blood-drop.svg" width="30" height="30"
+                class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,23 +78,30 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Multiple casualty incident</h2>
-                        <div class="row row-space">
-                            <div class="col-6">
-                                <div class="input-group">
-                                    <label class="label">Ambulance ID</label>
-                                    <input class="input--style-4" type="text" id="ambulanceID">
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="input-group">
-                                    <label class="label">Number of blood units</label>
-                                    <input class="input--style-4" type="text" id="numberOfBloodUnits">
-                                </div>
+
+                    <div class="row row-space">
+                        <div class="col-6">
+
+                            <div class="input-group">
+                                <label class="label">Ambulance ID</label>
+                                <input class="input--style-4" name="ambulanceID" type="text" id="ambulanceID">
                             </div>
                         </div>
-                        <div class="p-t-15">
-                            <button class="btn btn--pink" type="button" onclick="requestBloodUnits()">Submit</button>
+                        <div class="col-6">
+                            <div class="input-group">
+                                <label class="label">Number of blood units</label>
+                                <input class="input--style-4" name="numberOfBloodUnits" type="text"
+                                    id="numberOfBloodUnits">
+                            </div>
                         </div>
+                    </div>
+
+
+
+                    <div class="p-t-15">
+                        <button class="btn btn--pink" type="button" onclick="requestBloodUnits()">Submit</button>
+                    </div>
+
                 </div>
             </div>
         </div>

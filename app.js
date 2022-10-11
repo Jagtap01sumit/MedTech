@@ -3,32 +3,47 @@ const path = require("path");
 const cheerio = require("cheerio");
 // const fetch = require("node-fetch");
 const mongoose = require("mongoose");
+const { Router } = require("express");
 async function main() {
-  await mongoose.connect("mongodb://localhost/contactMedTech");
+  await mongoose.connect("mongodb://localhost/MedTech");
 
   // use `await mongoose.connect('mongodb://user:password@localhost:27017/test');` if your database has auth enabled
 }
 const app = express();
 const port = 80;
+main();
 
 // define schema
 const contactSchema = new mongoose.Schema({
   name: String,
   email: String,
   phone: String,
-  mesage: String,
+  message: String,
 });
+const BloodSchema = new mongoose.Schema({
+  id: String,
+  fullname: String,
+  phone: String,
+  street: String,
+  city: String,
+  bloodtype: String
+});
+const MCISchema= new mongoose.Schema({
+  ambulanceID:String,
+  numberOfBloodUnits:String
+
+
+})
 
 const contact = mongoose.model("contact", contactSchema);
+const BloodData = mongoose.model("BloodData", BloodSchema);
+const MCIData = mongoose.model("MCIData", MCISchema);
 
 // EXPRESS SPECIFIC STUFF
 app.use("/static", express.static("static")); // For serving static files
 app.use(express.urlencoded());
 app.use(express.json());
 
-// PUG SPECIFIC STUFF
-// app.set('view engine', 'pug') // Set the template engine as pug
-app.set("views", path.join(__dirname, "views")); // Set the views directory
 
 // ENDPOINTS
 app.get("/", (req, res) => {
@@ -89,14 +104,44 @@ app.post("/scrap", (req, res) => {
   console.log(url);
   res.status(200).json({ url: url });
 });
-// app.get('/contact',(req,res)=>{
-//       const params = {};    res.status(200).render("index.html", params);
+app.get('/contact',(req,res)=>{
+      const params = {};    res.status(200).render("index.html", params);
+ })
+// app.get("/pages/viewDonors.html",(req,res)=>{
+//   res.sendFile(__dirname + "/views/viewHospitalUse.html");
 //  })
-
 
 app.post('/contact', (req, res) => {
   var myData = new contact(req.body);
+  console.log(myData);
   myData
+    .save()
+    .then(() => {
+      // res.send("This item has been saved to the database");
+    })
+    .catch(() => {
+      res.status(400).send("Itme not saved");
+    });
+ 
+});
+
+app.post('/blood', (req, res) => {
+  var myBloodData = new BloodData(req.body);
+  console.log(myBloodData);
+  myBloodData
+    .save()
+    .then(() => {
+      res.send("This item has been saved to the database");
+    })
+    .catch(() => {
+      res.status(400).send("Itme not saved");
+    });
+ 
+});
+app.post('/MCI', (req, res) => {
+  var mciData = new MCIData(req.body);
+  console.log(mciData);
+  mciData
     .save()
     .then(() => {
       res.send("This item has been saved to the database");

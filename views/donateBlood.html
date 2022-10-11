@@ -44,8 +44,8 @@
     <!-- ---------------------------------------------------------------------------------------------- -->
     <nav class="navbar navbar-expand-xl navbar-light " style="background-color: #ffb5fd;">
         <a class="navbar-brand" href="/views/bb.html">
-            <img src="/static/assets/images/navbar-blood-drop.svg" width="30" height="30" class="d-inline-block align-top"
-                alt="">
+            <img src="/static/assets/images/navbar-blood-drop.svg" width="30" height="30"
+                class="d-inline-block align-top" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,18 +85,18 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h2 class="title">Receiving Blood</h2>
-                    <form>
+                    <form action="/blood" method="post">
                         <div class="row row-space">
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">ID</label>
-                                    <input class="input--style-4" type="text" id="donorID">
+                                    <input class="input--style-4" name="id" type="text" id="donorID">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="input-group">
                                     <label class="label">Full Name</label>
-                                    <input class="input--style-4" type="text" id="fullName">
+                                    <input class="input--style-4" name="fullname" type="text" id="fullName">
                                 </div>
                             </div>
                         </div>
@@ -104,26 +104,26 @@
                             <div class="col-4">
                                 <div class="input-group">
                                     <label class="label">Phone</label>
-                                    <input class="input--style-4" type="phone" id="phoneNumber">
+                                    <input class="input--style-4" name="phone" type="phone" id="phoneNumber">
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="input-group">
                                     <label class="label">Street</label>
-                                    <input class="input--style-4" type="text" id="streetInput">
+                                    <input class="input--style-4" name="street" type="text" id="streetInput">
                                 </div>
                             </div>
                             <div class="col-4">
                                 <div class="input-group">
                                     <label class="label">City</label>
-                                    <input class="input--style-4" type="text" id="cityInput">
+                                    <input class="input--style-4" name="city" type="text" id="cityInput">
                                 </div>
                             </div>
                         </div>
                         <div class="col-4 blood-type-dropdown">
                             <label class="label">Blood Type</label>
                             <div class="rs-select2 js-select-simple select--no-search">
-                                <select class="custom-select" id="bloodTypeSelect">
+                                <select class="custom-select" id="bloodTypeSelect" name="bloodtype">
                                     <option disabled="disabled" selected="selected">Choose type</option>
                                     <option>A+</option>
                                     <option>A-</option>
@@ -137,7 +137,12 @@
                             </div>
                         </div>
                         <br>
+
+
+                        <button class="btn btn--pink" >Submit</button>
+
                         <div class="p-t-15">
+                          
                             <button class="btn btn--pink" type="button" onclick="addDonor(event)">Submit</button>
                         </div>
                     </form>

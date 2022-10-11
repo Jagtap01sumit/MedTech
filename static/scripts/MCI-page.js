@@ -17,7 +17,7 @@ function requestBloodUnits() {
     if(available.amount === 0){
         const answer = confirm("Sadly, there is not enough blood units of type O-.\nwould you like to be redirected to the donors table?");
         if (answer) {
-            window.location.href = '../pages/viewDonors.html';
+            window.location.href = '/views/viewDonors.html';
         }
         return;
     }

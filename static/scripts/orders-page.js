@@ -44,12 +44,59 @@ function checkBloodTypeAvailability(bloodType, numBUs) {
         "B-": ["B-", "O-"],
         "AB-": ["AB-", "A-", "B-", "O-"]
     }
-    const bloodBank = getObjectFromLocalStorage("bloodBank");
+    // const bloodBank = getObjectFromLocalStorage("bloodBank");
+    const donors = getObjectFromLocalStorage("donors");
+
+    const b = {
+        "A+":0, "B+":0, "AB+":0, "O+":0,
+        "A-":0, "B-":0, "AB-":0, "O-":0,
+     }
+     for (let i = 0; i < donors.length; i++) {
+        // tableRow = addTableRow(i + 1, bloodTypesData[i].bloodType, bloodTypesData[i].amount);
+        // tbody.appendChild(tableRow);
+        b[donors[i].bloodType] += 1
+    }
+    const bloodBank = [
+        {
+            bloodType: "A+",
+            amount: b["A+"]
+        },
+        {
+            bloodType: "B+",
+            amount:  b["B+"]
+        },
+        {
+            bloodType: "O+",
+            amount:  b["O+"]
+        },
+        {
+            bloodType: "AB+",
+            amount:  b["AB+"]
+        },
+        {
+            bloodType: "A-",
+            amount: b["A-"]
+        },
+        {
+            bloodType: "B-",
+            amount: b["B-"]
+        },
+        {
+            bloodType: "O-",
+            amount:  b["O-"]
+        },
+        {
+            bloodType: "AB-",
+            amount:  b["AB-"]
+        }
+    ];
+
     let givenBloodTypes = {
         bloodTypes: [],
         amount: 0
     };
-    for (const blood of bloodBank) {
+    for (const blood of  bloodBank) {
+     
         if (blood.bloodType === bloodType) {
             //first we check if the amount is enough
             if (blood.amount >= numBUs) {
@@ -60,6 +107,7 @@ function checkBloodTypeAvailability(bloodType, numBUs) {
                 givenBloodTypes = checkOtherBloodTypes(numBUs, bloodBank, compatibleBTs[bloodType]);
             }
         }
+    
     }
     return givenBloodTypes;
 }
@@ -81,7 +129,7 @@ function addOrder() {
     if (givenBloodTypes.bloodTypes.length === 0) {
         const answer = confirm("Sadly, there is not enough blood units from the same type or other compatible types.\nwould you like to be redirected to the donors table?");
         if (answer) {
-            window.location.href = '../pages/viewDonors.html';
+            window.location.href = '/viewDonors.html';
         }
         return;
     }
