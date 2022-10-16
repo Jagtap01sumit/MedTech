@@ -11,6 +11,8 @@
     <script src="/views/index.js"></script>
     <link rel="icon" href="/static/img/logo.png">
     <link rel="stylesheet" href="../app.js">
+    <link rel="stylesheet" media="screen and (max-width: 1300px" href="/static/mobile.css">
+
 
 </head>
 <!-- style include ../static/style.css -->
@@ -28,11 +30,23 @@
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
         <a href="#about us">About Us</a>
-        <a href="#start">Medicine</a>
-        <a href="#blood_Bank">Blood Bank</a>
+        <!-- <a href="#start">Medicine</a> -->
+        <!-- <a href="#blood_Bank">Blood Bank</a> -->
         <div>
             <button onclick="myFunction()" class="btn" id="myBtn">Help line
         </div>
+        <script>
+            function myFunction() {
+                var txt;
+                if (confirm("HelpLine Number:9137705219")) {
+                    alert("jagtapsumit668@gmail.com");
+
+                } else {
+                    txt = "You pressed Cancel!";
+                }
+                document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
 
     </nav>
     <section id="introduction" class="section">
@@ -52,7 +66,7 @@
         <div class="expo">
 
             <a href="#services">
-                <button class="exploreboxbutton">Explore </button>
+                <button class="glow-on-hover">Explore </button>
             </a>
 
         </div>
@@ -74,16 +88,21 @@
             <h1>Our Services</h1>
         </div>
         <div class="sevices_3">
-            <div class="sevices_3_box">
-                <h1>sumit</h1>
+            <!-- <div class="sevices_3_box"> -->
+            <div class="glow-on-hover" id="sevices_3_box">
+                <a href="#start"><h1>Medicine</h1></a>
+
                 <p>my name is sumit</p>
             </div>
-            <div class="sevices_3_box">
-                <h1>sumit</h1>
+            <!-- <div class="sevices_3_box"> -->
+            <div class="glow-on-hover" id="sevices_3_box">
+                <a href="#blood_Bank">Blood Bank</a>
+
                 <p>my name is sumit</p>
             </div>
-            <div class="sevices_3_box">
-                <h1>sumit</h1>
+            <!-- <div class="sevices_3_box"> -->
+            <div class="glow-on-hover" id="sevices_3_box">
+                <a href="#organ_donation">Organ Donation</a>
                 <p>my name is sumit</p>
             </div>
         </div>
@@ -335,7 +354,7 @@
     </section>
 
 
-    <section class="organ_section">
+    <section class="organ_section" id="organ_donation">
 
         <div class="Services">
             <h1>Organ donation</h1>

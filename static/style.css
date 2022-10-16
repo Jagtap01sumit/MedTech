@@ -28,11 +28,12 @@ html {
     position: fixed;
     width: 100%;
 }
+
 .navbar {
     justify-content: space-between;
-    background-color: rgb(45, 40, 40);
+    background-color: rgb(0 11 67);
     overflow: hidden;
-    /* position: fixed; */
+
     top: 0;
     width: 100%;
     height: 87px;
@@ -44,31 +45,30 @@ html {
 
 }
 
-#navbar a {
+ #navbar a {
     font-family: 'Fredoka One', cursive;
 }
 
 .navbar a:hover {
     color: black;
 
-}
-
+} 
+ 
 a {
     margin-left: -489px;
     padding: 2px 50px;
     color: white;
     font-size: 18px;
     text-decoration: none;
-}
+} 
 
 
 .logo img {
-    height: 96px;
-    width: 148px;
-    margin: -46px 0px;
+    height: 88px;
+    width: 90px;
+    margin: -42px -3px;
     padding: 23px -17p;
-    margin-right: 16px;
-
+    margin-right: 21px;
 }
 
 .logo {
@@ -91,7 +91,7 @@ a {
 }
 /********************************************************************************* Introduction section  */
 #introduction {
-    height: 623px;
+    height: 672px;
     width: 100%;
     background: url("bg2.jpg") no-repeat center center/cover;
     align-items: center;
@@ -143,21 +143,72 @@ a {
     margin: 23px;
 }
 
-.exploreboxbutton {
-    border: 2px solid white;
-    /* color: white; */
-    border-radius: 20px;
-    margin: 10px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    padding: 18px;
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    border: 1px solid white;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(0 11 67);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 
 /* #services {
 
     margin: 34;
     display: flex;
-}
-  */
+} */
+ 
 /************************************************************************ Our Sevices  */
 
 
@@ -177,23 +228,31 @@ a {
     display: flex;
     padding-top: 250px;
 }
-.sevices_3 :hover{
+/* .sevices_3 :hover{
     background-color: rgb(172, 164, 164);
   
     opacity: 2;
-}
-.sevices_3_box{
-    border: 2px solid black;
+} */
+#sevices_3_box{
+    /* border: 2px solid rgb(0, 0, 0); */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     margin: 34px;
     padding: 80px;
+    filter: drop-shadow(15px 17px 8px black);
   
-    border-radius: 10px;
+    /* border-radius: 10px; */
     width: 30%;
 }
+.glow-on-hover a{
+    margin-left: 2px;
+    margin: -2px;
+    font-size: 42px;
+    padding: 5px;
+}
+
 /******************************************************* Medicine Service section  */
 
 
@@ -315,7 +374,7 @@ a {
 .bb_section {
 
     width: 100%;
-    height: 757px;
+    height: 847px;
     color: red;
     /* background: url("/static/img/bb_bg.jpg") no-repeat center center; */
     background-size: 100% 100%;
@@ -432,7 +491,7 @@ a {
 
 
 .section-3-about_us {
-    height: 780px;
+    height: 840px;
     /* background-color: blue; */
 
 }
