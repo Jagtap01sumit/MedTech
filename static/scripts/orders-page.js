@@ -129,7 +129,7 @@ function addOrder() {
     if (givenBloodTypes.bloodTypes.length === 0) {
         const answer = confirm("Sadly, there is not enough blood units from the same type or other compatible types.\nwould you like to be redirected to the donors table?");
         if (answer) {
-            window.location.href = '/viewDonors.html';
+            window.location.href = '/views/viewDonors.html';
         }
         return;
     }

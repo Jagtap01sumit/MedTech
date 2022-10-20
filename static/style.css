@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* ************************************************************navbar Section */
 header {
     width: 100%;
@@ -24,7 +25,8 @@ html {
     margin-top: 100px;
     font-family: 'Libre Baskerville', serif;
 }
-.nav_bar{
+
+.nav_bar {
     position: fixed;
     width: 100%;
 }
@@ -45,22 +47,22 @@ html {
 
 }
 
- #navbar a {
+#navbar a {
     font-family: 'Fredoka One', cursive;
 }
 
 .navbar a:hover {
     color: black;
 
-} 
- 
+}
+
 a {
     margin-left: -489px;
     padding: 2px 50px;
     color: white;
     font-size: 18px;
     text-decoration: none;
-} 
+}
 
 
 .logo img {
@@ -76,6 +78,24 @@ a {
 
 }
 
+#myBtn {
+    justify-content: center;
+    padding: 10px 0px;
+    text-align: right;
+    border-radius: 10px;
+    /* background-color: rgb(43, 113, 150); */
+    margin: 23px;
+    font-size: 17px;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    display: flex;
+    align-content: center;
+    cursor: pointer;
+    width: 105px;
+    height: 38px;
+}
+
+/* now only for contact submi button  */
 .btn {
     padding: 6px 26px;
     text-align: right;
@@ -89,9 +109,10 @@ a {
 
 
 }
+
 /********************************************************************************* Introduction section  */
 #introduction {
-    height: 672px;
+    height: 580px;
     width: 100%;
     background: url("bg2.jpg") no-repeat center center/cover;
     align-items: center;
@@ -128,12 +149,13 @@ a {
     justify-content: center;
     align-items: center;
     display: flex;
-    margin: 100px;
+    margin: 150px;
     font-family: 'Noto Serif JP', serif;
-    font-size: 167px;
+    font-size: 154px;
     color: white;
     height: auto;
 }
+
 .expo {
     padding-left: 425px;
     display: flex;
@@ -155,12 +177,13 @@ a {
     z-index: 0;
     border-radius: 10px;
 }
+
 .glow-on-hover:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -198,42 +221,51 @@ a {
 }
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
 }
 
 /* #services {
 
     margin: 34;
     display: flex;
-} */
- 
-/************************************************************************ Our Sevices  */
+} 
+  */
+/************************************************************************************ Our Sevices  */
 
 
 .Services {
     height: 190px;
     font-family: 'Fredoka One', cursive;
     display: flex;
-    
+
     align-items: center;
     justify-content: center;
     /* margin-top: 163px; */
     font-size: 40px;
 }
 
-.sevices_3{
+.sevices_3 {
     font-size: 20px;
     display: flex;
     padding-top: 250px;
 }
+
 /* .sevices_3 :hover{
     background-color: rgb(172, 164, 164);
   
     opacity: 2;
 } */
-#sevices_3_box{
+#sevices_3_box {
     /* border: 2px solid rgb(0, 0, 0); */
     display: flex;
     align-items: center;
@@ -242,11 +274,12 @@ a {
     margin: 34px;
     padding: 80px;
     filter: drop-shadow(15px 17px 8px black);
-  
+
     /* border-radius: 10px; */
     width: 30%;
 }
-.glow-on-hover a{
+
+.glow-on-hover a {
     margin-left: 2px;
     margin: -2px;
     font-size: 42px;
@@ -393,7 +426,8 @@ a {
     color: white;
 
 }
-.Sub-Tital{
+
+.Sub-Tital {
     font-size: 30px;
 }
 
@@ -413,17 +447,20 @@ a {
     display: flex;
     /* background-color: rgb(245, 83, 83); */
 }
-.images{
+
+.images {
     height: 100px;
     width: 100px;
 }
-.image_2 img{
+
+.image_2 img {
     margin-right: 977px;
     margin-top: -45px;
     height: 243px;
     width: 345px;
 }
-.images img{
+
+.images img {
     height: 500px;
     height: 321px;
     width: 544px;
@@ -434,6 +471,7 @@ a {
     padding-left: 231px;
     margin-left: 95px;
 }
+
 .bb_Tital {
     font-size: 20px;
     align-items: center;
@@ -457,7 +495,8 @@ a {
 
 
 }
- /* ***********************************************************Organ Donatin Section  */
+
+/* ***********************************************************Organ Donatin Section  */
 
 /* .h-secondary {
     display: flex;
@@ -470,7 +509,9 @@ a {
 .center {
     margin: 23px 33px;
 } */
-
+#organ-btn{
+    margin-top: 334px;
+}
 .section-2-explore {
     height: 922px;
     background-color: pink;
@@ -610,9 +651,11 @@ a {
     align-items: center;
     padding-bottom: 34px;
 }
-#contact_us_id h1{
+
+#contact_us_id h1 {
     margin-top: 43px;
 }
+
 #contact-box input,
 #contact-box textarea {
     width: 100%;

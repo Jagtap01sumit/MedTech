@@ -98,6 +98,9 @@ app.get("/views/viewHospitalUse.html", (req, res) => {
 app.get("/views/viewHospitalUse", (req, res) => {
   res.sendFile(__dirname + "/views/viewHospitalUse.html");
 });
+app.get("/views/bb.html", (req, res) => {
+  res.sendFile(__dirname + "/views/bb.html");
+});
 
 app.post("/scrap", (req, res) => {
   const url = req.body.url;
