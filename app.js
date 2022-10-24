@@ -155,6 +155,106 @@ app.post('/MCI', (req, res) => {
  
 });
 
+
+
+
+
+
+
+
+
+// organ donation **************************************************************************************************************
+
+app.get("/organ_donation.html", function (req, res) {
+  res.sendFile(__dirname + "/views/organ_donation.html");
+});
+app.get("/Organ_Form.html", function (req, res) {
+  res.sendFile(__dirname + "/views/Organ_Form.html");
+});
+app.get("/Hospital_req.html", function (req, res) {
+  res.sendFile(__dirname + "/views/Hospital_req.html");
+});
+
+
+app.get("/views/organ_donation.html", function (req, res) {
+  res.sendFile(__dirname + "/views/organ_donation.html");
+});
+
+app.get("/Organ_Table.html",(req,res)=>{
+  res.sendFile(__dirname+"/views/Organ_Table.html")
+
+})
+
+
+
+app.get("/views/Organ", (req, res) => {
+  const params = {};
+  res.status(200).render("/Organ_Form.html", params);
+});
+
+
+
+
+// define schema
+const OrganSchema = new mongoose.Schema({
+  id: String,
+  fullname: String,
+  phone: String,
+  street: String,
+  city: String,
+  age: String,
+
+  adhar: String,
+  organ: String,
+});
+
+const Hos_reqSchema = new mongoose.Schema({
+  id: String,
+  fullname: String,
+
+  age: String,
+
+  adhar: String,
+  organ: String
+},{timestamps:true});
+
+const Hospital_req_organ = mongoose.model("Hospitals_request", Hos_reqSchema);
+app.post("/Hospital_request", (req, res) => {
+  console.log(req.body)
+  var Hospital_req_Data = new Hospital_req_organ(req.body);
+  console.log(Hospital_req_Data);
+  Hospital_req_Data.save()
+    .then(() => {
+      // res.send("This item has been saved to the database");
+    })
+    .catch(() => {
+      res.status(400).send("Itme not saved");
+    });
+});
+
+
+
+const Organ= mongoose.model("organ_donation_Form",OrganSchema  );
+app.post("/Organ", (req, res) => {
+  var myorganData = new Organ(req.body);
+  console.log(myorganData);
+  myorganData
+    .save()
+    .then(() => {
+      // res.send("This item has been saved to the database");
+    })
+    .catch(() => {
+      res.status(400).send("Itme not saved");
+    });
+});
+
+app.get("/hospital_data", async (req,res) => {
+  const data = await Hospital_req_organ.find({});
+  res.json(data)
+});
+
+
+
 // START THE SERVER
 app.listen(port, () => {
   console.log(`The application started successfully on port ${port}`);
