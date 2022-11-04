@@ -257,7 +257,7 @@ a {
 .sevices_3 {
     font-size: 20px;
     display: flex;
-    padding-top: 330px;
+    padding-top: 300px;
 }
 
 /* .sevices_3 :hover{
@@ -272,13 +272,43 @@ a {
     justify-content: center;
     flex-direction: column;
     margin: 34px;
-    padding: 80px;
+    padding: 67px;
     filter: drop-shadow(15px 17px 8px black);
 
     /* border-radius: 10px; */
     width: 30%;
 }
+.minibox_section{
+    height: 108px;
+    padding: -1px;
+    width: 202px;
+    display: flex;
+    align-items: center;
+    font-size: 9px;
+    /* margin: -7px; */
+    margin-bottom: -23px;
+    flex-direction: column;
 
+}
+.minibox-1{
+    /* border: 1px solid white; */
+    margin: 3px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    justify-content: center;
+}
+.minibox-1 img{
+    height: 16px;
+    width: 23px;
+    padding-right: -8px;
+    
+}
+#sevices_3_box h1{
+    font-size: 41px;
+    margin-top: -31px;
+}
 .glow-on-hover a {
     margin-left: 2px;
     margin: -2px;
@@ -343,7 +373,10 @@ a {
 
 }
 
-
+.medicine_content{
+   margin: 5px;
+   padding: 16px;
+}
 .para {
     /* padding-bottom: 203px; */
     width: 191px;
@@ -429,6 +462,11 @@ a {
 
 .Sub-Tital {
     font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
 }
 
 .bb_page h1 {
@@ -436,7 +474,7 @@ a {
     align-items: center;
     justify-content: center;
     margin-top: 111px;
-    margin-bottom: 85px;
+    margin-bottom: 50px;
     /* margin: 29px; */
     font-size: 60px;
 }
@@ -447,29 +485,44 @@ a {
     display: flex;
     /* background-color: rgb(245, 83, 83); */
 }
+.image_section{
+    background-color: wheat;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* height: 200px; */
+    width: 90%;
+    margin: 8px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 25px;
+    height: 323px;
+}
+#images_1 img{
+    height: 280px;
+    width: 467px;
+    margin-right: -170px;
 
-.images {
+}
+#images_2 img{
+    height: 280px;
+    width: 330px;
+}
+#images_3 img{
+    height: 280px;
+    width: 330px;
+}
+
+.Image_1 {
+   
+    margin: 110px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
     height: 100px;
     width: 100px;
-}
-
-.image_2 img {
-    margin-right: 977px;
-    margin-top: -45px;
-    height: 243px;
-    width: 345px;
-}
-
-.images img {
-    height: 500px;
-    height: 321px;
-    width: 544px;
-    /* padding-bottom: 72px; */
-    padding-right: -52px;
-    /* padding: 146px; */
-    padding: initial;
-    padding-left: 231px;
-    margin-left: 95px;
+    justify-content: center;
 }
 
 .bb_Tital {
@@ -510,7 +563,26 @@ a {
     margin: 23px 33px;
 } */
 #organ-btn{
-    margin-top: 334px;
+    margin-top: 50px;
+}
+.Sub-Tital-organ{
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    height: 300px;
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(245, 238, 238);
+}
+ 
+.Image_3 img{
+    height: 218px;
+    width: 376px;
+}
+
+.organ-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .section-2-explore {
     height: 922px;
@@ -519,12 +591,32 @@ a {
 
 
 .organ_section {
-    height: 700px;
-    background-color: brown;
+    height: 748px;
+    /* background-color: brown; */
 }
 
+.image_section_1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    margin: 44px;
+    padding: 25px;
+    height: 200px;
 
+}
+.Sub-Tital-organ h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
 
+}
+.Sub-Tital-organ p{
+    margin: 10px;
+    padding: 10px;
+}
 
 
 
@@ -547,8 +639,8 @@ a {
     margin: 5px;
 
     /* display: flex; */
-    align-items: center;
-    justify-content: center;
+    /* align-items: center; */
+    /* justify-content: center; */
 }
 
 #img_ID img {
@@ -563,7 +655,7 @@ a {
     /* margin: 33px; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     font-size: 55px;
 }
 
@@ -576,8 +668,9 @@ a {
 }
 
 .info-in-servicebox_innerbox img {
-    height: 34px;
-    width: 34px;
+    height: 60px;
+    width: 79px;
+    margin-right: 35px;
 }
 
 #info_ID {
@@ -595,10 +688,11 @@ a {
     border: 2px solid black;
     border-radius: 10px;
     margin: 23px;
-    padding: 34px;
+    /* padding: 34px; */
+    padding: 14px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
 
 }
 
@@ -632,7 +726,7 @@ a {
 
 #contact {
     width: 100%;
-    height: 123px;
+    height: 709px;
 }
 
 /* .contact h1 {
@@ -660,8 +754,9 @@ a {
 #contact-box textarea {
     width: 100%;
     padding: 0.5rem;
-    border-radius: 9px;
+    border-radius: 3px;
     font-size: 1.1rem;
+    border: 1px solid;
 }
 
 #contact-box form {
@@ -676,8 +771,11 @@ a {
 
 
 /*********************************************************************************** footer section  */
-/* .footer {
-    height: 100px;
+footer {
+    height: 30px;
+    display: flex;
     color:white;
+    align-items: center;
+    justify-content: center;
     background-color: black;
-} */
+}

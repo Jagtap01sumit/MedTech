@@ -134,7 +134,7 @@ app.post('/blood', (req, res) => {
   myBloodData
     .save()
     .then(() => {
-      res.send("This item has been saved to the database");
+      // res.send("This item has been saved to the database");
     })
     .catch(() => {
       res.status(400).send("Itme not saved");
