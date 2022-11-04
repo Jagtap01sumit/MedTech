@@ -29,15 +29,18 @@ const BloodSchema = new mongoose.Schema({
   bloodtype: String
 });
 const MCISchema= new mongoose.Schema({
-  ambulanceID:String,
-  numberOfBloodUnits:String
+  patientID: String,
+  fullName: String,
+  numberOfBloodUnits: String,
+  bloodTypeSelect: String,
+
 
 
 })
 
 const contact = mongoose.model("contact", contactSchema);
 const BloodData = mongoose.model("BloodData", BloodSchema);
-const MCIData = mongoose.model("MCIData", MCISchema);
+const MCIData = mongoose.model("order blood", MCISchema);
 
 // EXPRESS SPECIFIC STUFF
 app.use("/static", express.static("static")); // For serving static files

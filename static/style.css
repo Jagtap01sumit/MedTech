@@ -1,6 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Fredoka+One&family=Noto+Serif+JP:wght@600;700&family=Orbitron&display=swap'); */
 
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Fredoka+One&family=Libre+Baskerville:wght@700&family=Noto+Serif+JP:wght@600;700&family=Orbitron&family=Oswald:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Arimo:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -179,6 +180,10 @@ a {
     border-radius: 10px;
 }
 
+#explo {
+    z-index: -1;
+}
+
 .glow-on-hover:before {
     content: '';
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
@@ -235,12 +240,7 @@ a {
     }
 }
 
-/* #services {
 
-    margin: 34;
-    display: flex;
-} 
-  */
 /************************************************************************************ Our Sevices  */
 
 
@@ -251,7 +251,6 @@ a {
 
     align-items: center;
     justify-content: center;
-    /* margin-top: 163px; */
     font-size: 40px;
 }
 
@@ -274,13 +273,9 @@ a {
     padding-top: 123px;
 }
 
-/* .sevices_3 :hover{
-    background-color: rgb(172, 164, 164);
-  
-    opacity: 2;
-} */
+
 #sevices_3_box {
-    /* border: 2px solid rgb(0, 0, 0); */
+ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -288,8 +283,6 @@ a {
     margin: 34px;
     padding: 47px;
     filter: drop-shadow(15px 17px 8px black);
-
-    /* border-radius: 10px; */
     width: 30%;
 }
 
@@ -347,10 +340,8 @@ a {
     background-image: linear-gradient(#eaf2f4, #aad7e9);
 
     max-height: 421px;
-    /* border: 2px solid black; */
     display: flex;
     overflow-x: auto;
-    /* padding: 64px 23px; */
     border-radius: 10px;
     padding-top: 32px;
     margin: -4px 10px;
@@ -384,16 +375,9 @@ a {
 
 .boxes {
     margin-top: 32px;
-
     height: 399px;
-    /* IMPORTANT--> */
-    /* line-height: 210px;
-    line-height: 210px; */
-
-    /* background-color: rgb(171, 214, 247); */
-    background-color: white;
+background-color: white;
     border-radius: 30px;
-    /* border: 3px solid rgb(0, 0, 0); */
     padding: 34px;
     margin: 29px 14px;
 
@@ -427,28 +411,6 @@ a {
     height: 136px;
 }
 
-/* .h-primary {
-    align-items: center;
-    justify-content: center;
-    font-size: 40px;
-    display: flex;
-} */
-
-
-
-/* #services .box {
-    padding: 34px;
-    margin: 114px 6px;
-    border-radius: 30px;
-    border: 3px solid rgb(0, 0, 0);
-    background-color: rgb(123, 186, 240);
-    height: 360px;
-    width: 94%;
-    font-size: 20px;
-
-} */
-
-
 /**************************************************************************** Blood Bank Section  */
 
 
@@ -470,7 +432,7 @@ a {
     width: 100%;
     height: 847px;
     color: red;
-    /* background: url("/static/img/bb_bg.jpg") no-repeat center center; */
+
     background-size: 100% 100%;
     z-index: -1;
     opacity: 2;
@@ -483,7 +445,7 @@ a {
     /* margin-top: 192px; */
     font-family: 'Noto Serif JP', serif;
     font-size: 167px;
-    padding-left: 552px;
+    padding-left: 442px;
     color: white;
 
 }
@@ -556,6 +518,7 @@ a {
     align-items: center;
     height: 288px;
     width: 60%;
+
     justify-content: center;
 }
 
@@ -585,17 +548,6 @@ a {
 
 /* ***********************************************************Organ Donatin Section  */
 
-/* .h-secondary {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
-
-
-/* 
-.center {
-    margin: 23px 33px;
-} */
 #organ-btn {
     margin-top: 50px;
 }
@@ -622,23 +574,20 @@ a {
 
 .section-2-explore {
     height: 922px;
-    /* background-color: pink; */
-    /* background-image: url(/static/img/medical-services.jpg); */
-    /* background-size: 100% 100%; */
-    /* filter: blur(8px);
-    -webkit-filter: blur(8px); */
+
     z-index: -1;
 }
-#services{
+
+#services {
     background-image: url(/static/img/medical-services-1.jpg);
     background-size: 100% 100%;
-  
+
 
 }
 
 .organ_section {
     height: 748px;
-    /* background-color: brown; */
+
 }
 
 .image_section_1 {
@@ -662,11 +611,12 @@ a {
 
 }
 
-.Sub-Tital-organ li{
+.Sub-Tital-organ li {
     margin: 10px;
     padding: 10px;
 }
-.organ-content-2{
+
+.organ-content-2 {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -682,7 +632,6 @@ a {
 
 .section-3-about_us {
     height: 840px;
-    /* background-color: blue; */
 
 }
 
@@ -692,16 +641,11 @@ a {
 }
 
 #about_service .info_in_servicebox {
-    /* border: 2px solid black; */
     margin: 5px;
-
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
 }
 
 #img_ID img {
-    height: 700px;
+    height: 737px;
     width: 681px;
     margin: 22px;
     padding: 33px;
@@ -726,40 +670,45 @@ a {
 
 .info-in-servicebox_innerbox img {
     height: 60px;
-    width: 79px;
+    width: 75px;
     margin-right: 35px;
 }
 
 #info_ID {
-    /* border: 2px solid black; */
+  
     margin: 23px;
 
-    /* display: flex; */
+    
     align-items: center;
     justify-content: center;
 
 
 }
 
+.content_about p {
+    display: flex;
+    text-align: start;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 17px;
+    padding-bottom: 0px;
+    font-family: 'Libre Baskerville', serif;
+}
+
 .info-in-servicebox_innerbox {
-    border: 2px solid black;
+    border: 1px solid black;
     border-radius: 10px;
     margin: 23px;
-    /* padding: 34px; */
-    padding: 14px;
+padding: 12px;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+
+    font-family: 'Arimo', sans-serif;
 
 }
 
-/* .image_in_servicebox{
-    height: 34px;
-    width: 50%;
-    display: flex;
-    padding: 22px;
-    flex-direction: column;
-} */
 
 
 
@@ -785,12 +734,6 @@ a {
     width: 100%;
     height: 709px;
 }
-
-/* .contact h1 {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-} */
 
 #contact-box form {
     width: 80%;
